@@ -1,0 +1,11 @@
+name: pdflatex
+author: Marcin Białoń <marcin@bialon.net>
+description: pdflatex action
+inputs:
+  path:
+    description: 'source path'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args: ['${{inputs.path}}']
