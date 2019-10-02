@@ -8,4 +8,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - run: docker build -t mbialon/texlive .
+      - run: docker login docker.pkg.github.com --username mbialon
+      - run: docker build .
